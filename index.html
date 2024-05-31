@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sol con Nubes</title>
+</head>
+<body>
+    <canvas id="lienzo" width="500" height="300" style="border:1px solid blue">
+        <p>Tu navegador no soporta CANVAS. Deberías actualizar tu navegador</p>
+        <img src="imagen_falsa.png">
+    </canvas>
+</body>
+</html>
+<script type="text/javascript">
+    var hoja = document.getElementById("lienzo");
+    var dibujo = hoja.getContext("2d");
+
+    // Fondo azul claro
+    dibujo.fillStyle = "#B5CDFF";
+    dibujo.fillRect(0, 0, 500, 300);
+
+    // Sol
+    dibujo.fillStyle = "#F8FF5A";
+    dibujo.beginPath();
+    dibujo.arc(400, 80, 50, 0, Math.PI * 2, true);
+    dibujo.closePath();
+    dibujo.fill();
+
+    // Nubes
+    dibujo.fillStyle = "rgba(232,236,247,0.8)";
+    dibujo.beginPath();
+    dibujo.arc(70, 100, 40, 0, Math.PI * 2, true);
+    dibujo.arc(120, 100, 50, 0, Math.PI * 2, true);
+    dibujo.arc(170, 100, 40, 0, Math.PI * 2, true);
+    dibujo.arc(120, 80, 30, 0, Math.PI * 2, true);
+    dibujo.closePath();
+    dibujo.fill();
+
+    dibujo.beginPath();
+    dibujo.arc(320, 150, 40, 0, Math.PI * 2, true);
+    dibujo.arc(370, 150, 50, 0, Math.PI * 2, true);
+    dibujo.arc(420, 150, 40, 0, Math.PI * 2, true);
+    dibujo.arc(370, 130, 30, 0, Math.PI * 2, true);
+    dibujo.closePath();
+    dibujo.fill();
+
+    dibujo.beginPath();
+    dibujo.arc(170, 200, 40, 0, Math.PI * 2, true);
+    dibujo.arc(220, 200, 50, 0, Math.PI * 2, true);
+    dibujo.arc(270, 200, 40, 0, Math.PI * 2, true);
+    dibujo.arc(220, 180, 30, 0, Math.PI * 2, true);
+    dibujo.closePath();
+    dibujo.fill();
+</script>
+
